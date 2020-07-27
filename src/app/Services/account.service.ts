@@ -13,6 +13,6 @@ export class AccountService {
 
   getAccount(id): Observable<Account>
   {
-      return this.http.get<Account>(this.url+'?CustomerId='+id).pipe();
+      return this.http.get<Account>(this.url+'?accountId='+id).pipe();
   }
 }

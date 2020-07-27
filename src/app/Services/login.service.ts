@@ -24,7 +24,6 @@ export class LoginService {
   }
   checkUser(login:Login):Observable<any>
   {
-  
     return this.http.get<any>(this.URL+"?email="+login.email+"&password="+login.password);
   }
 }

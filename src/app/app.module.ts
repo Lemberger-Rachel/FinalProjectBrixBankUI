@@ -12,13 +12,17 @@ import {MaterialModule} from './material/material.module'
 import {AccountModule} from './account/account.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import {MatToolbarModule} from '@angular/material/toolbar';
+import { TransactionComponent } from './Component/transaction/transaction.component';
+import { EmailVerificationComponent } from './Component/email-verification/email-verification.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    TransactionComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,

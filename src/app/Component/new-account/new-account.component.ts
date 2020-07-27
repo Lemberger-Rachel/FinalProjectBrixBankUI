@@ -60,6 +60,7 @@ export class NewAccountComponent implements OnInit {
       next: success=>{
         if(success===true){
           this.result = 'You have successfully joined Brix Bank';
+          
           this.route.navigate(["./login"]);
         }
         else{

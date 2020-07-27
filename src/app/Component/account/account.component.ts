@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{Account} from 'src/app/Models/Account';
 import {AccountService} from 'src/app/Services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -9,7 +10,7 @@ import {AccountService} from 'src/app/Services/account.service';
 })
 export class AccountComponent implements OnInit {
   account: Account= new Account();
-  constructor(private accountSer: AccountService) { }
+  constructor(private accountSer: AccountService, private route:Router) { }
 
   ngOnInit(): void {
     this.accountSer.getAccount(sessionStorage.getItem("currentUser")).subscribe({
@@ -21,7 +22,11 @@ export class AccountComponent implements OnInit {
         console.log(err);
       }
     })
+  }
 
+  BankTransfer(){
+   
+    this.route.navigate(["./Transaction"]);
   }
 
 }
